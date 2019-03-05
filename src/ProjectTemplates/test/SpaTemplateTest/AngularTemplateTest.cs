@@ -13,7 +13,7 @@ namespace Templates.Test.SpaTemplateTest
         public AngularTemplateTest(ProjectFactoryFixture projectFactory, BrowserFixture browserFixture, ITestOutputHelper output)
             : base(projectFactory, browserFixture, output) { }
 
-        [Fact(Skip = "https://github.com/aspnet/AspNetCore-Internal/issues/1854")]
+        [Fact]
         public void AngularTemplate_Works()
             => SpaTemplateImpl("angular");
     }

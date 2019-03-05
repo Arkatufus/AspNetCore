@@ -19,7 +19,7 @@ namespace Templates.Test
         [Theory]
         [InlineData(null)]
         [InlineData("F#")]
-        private void MvcTemplate_NoAuthImpl(string languageOverride)
+        public void MvcTemplate_NoAuthImpl(string languageOverride)
         {
             Project.RunDotNetNew("mvc", language: languageOverride);
 
