@@ -165,7 +165,7 @@ namespace Microsoft.AspNetCore.Server.IIS.FunctionalTests
 
             var connectionList = new List<TestConnection>();
 
-            for (var i = 0; i < 5; i++)
+            for (var i = 0; i < 3; i++)
             {
                 var connection = new TestConnection(deploymentResult.HttpClient.BaseAddress.Port);
                 await connection.Send(
@@ -182,7 +182,7 @@ namespace Microsoft.AspNetCore.Server.IIS.FunctionalTests
             // Shouldn't stop the server here. Instead should drop app offline 
             AddAppOffline(deploymentResult.ContentRoot);
 
-            for (var i = 0; i < 5; i++)
+            for (var i = 0; i < 3; i++)
             {
                 await connectionList[i].Send("a", "");
                 await connectionList[i].Receive(
